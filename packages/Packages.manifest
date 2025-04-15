@@ -1,0 +1,2838 @@
+Package: base-files
+Version: 1658~0425664679
+Depends: libc, netifd, jsonfilter, usign, openwrt-keyring, fstools, fwtool, procd, procd-seccomp, busybox
+Source: feeds/base/base-files
+SourceName: base-files
+License: GPL-2.0
+Section: base
+SourceDateEpoch: 1744585655
+URL: http://openwrt.org/
+Architecture: aarch64_cortex-a76
+Installed-Size: 266240
+Filename: base-files_1658~0425664679_aarch64_cortex-a76.ipk
+Size: 51003
+SHA256sum: 6fca80f47307f8d9c9816bcce0cacb67b417b5daca20684438d4d9bb9523737c
+Description:  This package contains a base filesystem and system scripts for OpenWrt.
+
+Package: bcm27xx-gpu-fw
+Version: 2025.03.05-r1
+Depends: libc
+Source: feeds/base/kernel/bcm27xx-gpu-fw
+SourceName: bcm27xx-gpu-fw
+Section: boot
+SourceDateEpoch: 1742155709
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: bcm27xx-gpu-fw_2025.03.05-r1_aarch64_cortex-a76.ipk
+Size: 789
+SHA256sum: a9f4c14171689515e80b660241c501221c790d6dada37e858c3ec14c922440ff
+Description:  GPU and kernel boot firmware for bcm27xx.
+
+Package: bcm27xx-utils
+Version: 2025.03.14-r1
+Depends: libc, libfdt
+Provides: bcm27xx-userland
+Source: feeds/base/utils/bcm27xx-utils
+SourceName: bcm27xx-utils
+License: BSD-3-Clause
+LicenseFiles: LICENCE
+Section: utils
+SourceDateEpoch: 1742155709
+Architecture: aarch64_cortex-a76
+Installed-Size: 696320
+Filename: bcm27xx-utils_2025.03.14-r1_aarch64_cortex-a76.ipk
+Size: 133777
+SHA256sum: 9af0ecffe2b0f8b527e9a07c649da38375b5f6ab3d711e34ac27a116a6e346f2
+Description:  BCM27xx scripts and simple applications.
+ Replaces bcm27xx-userland scripts and applications.
+
+Package: dropbear
+Version: 2024.86-r1
+Depends: libc
+Alternatives: 100:/usr/bin/ssh-keygen:/usr/sbin/dropbear, 100:/usr/bin/scp:/usr/sbin/dropbear, 100:/usr/bin/ssh:/usr/sbin/dropbear
+Source: feeds/base/network/services/dropbear
+SourceName: dropbear
+License: MIT
+LicenseFiles: LICENSE libtomcrypt/LICENSE libtommath/LICENSE
+Section: net
+SourceDateEpoch: 1732819759
+URL: https://matt.ucc.asn.au/dropbear/
+CPE-ID: cpe:/a:dropbear_ssh_project:dropbear_ssh
+Architecture: aarch64_cortex-a76
+Installed-Size: 296960
+Filename: dropbear_2024.86-r1_aarch64_cortex-a76.ipk
+Size: 112244
+SHA256sum: aa29962ce0ea0f0dbcee0551c2e11537723de3b2908ab027d1503b4adb71e8f9
+Description:  A small SSH2 server/client designed for small memory environments.
+
+Package: fstools
+Version: 2024.07.14~408c2cc4-r1
+Depends: libc, ubox
+Source: feeds/base/system/fstools
+SourceName: fstools
+License: GPL-2.0
+Section: base
+SourceDateEpoch: 1720982721
+Maintainer: John Crispin <john@phrozen.org>
+Architecture: aarch64_cortex-a76
+Installed-Size: 204800
+Filename: fstools_2024.07.14~408c2cc4-r1_aarch64_cortex-a76.ipk
+Size: 22035
+SHA256sum: ffaa45a3e2205b7640aff6894ef92d96436f5b5c5b4dc5409cf4d20ed22ed284
+Description:  OpenWrt filesystem tools
+
+Package: fwtool
+Version: 2019.11.12~8f7fe925-r1
+Depends: libc
+Source: feeds/base/system/fwtool
+SourceName: fwtool
+License: GPL-2.0
+Section: utils
+SourceDateEpoch: 1712395458
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 71680
+Filename: fwtool_2019.11.12~8f7fe925-r1_aarch64_cortex-a76.ipk
+Size: 5061
+SHA256sum: d6c16dd573d0926bae5b5ff91048a187b0ae9cae5870f5c0faee72b4361513d4
+Description:  Utility for appending and extracting firmware metadata and signatures
+
+Package: kmod-brcmfmac
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-cfg80211, kmod-brcmutil, kmod-mmc, kmod-usb-core, brcmfmac-firmware-usb
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/en/users/drivers/brcm80211
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 471040
+Filename: kmod-brcmfmac_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 149081
+SHA256sum: ff9eb10b8b5eb769aa0ce5299d85b884a9b239f2684e6fd83a78bf3c70bff292
+Description:  Kernel module for Broadcom IEEE802.11n USB Wireless cards
+
+Package: kmod-brcmutil
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/en/users/drivers/brcm80211
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-brcmutil_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 5316
+SHA256sum: 906475c2b572574581512108fe11b74b7ea665f6d4f24453e94912597bbdc283
+Description:  This module contains some common parts needed by Broadcom Wireless drivers brcmsmac and brcmfmac.
+
+Package: kmod-cfg80211
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), iw, iwinfo, wifi-scripts, wireless-regdb
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 552960
+Filename: kmod-cfg80211_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 185137
+SHA256sum: ad72803f04f3659ebb80c255ef21e8339a974ec1f859b946454b15d7e41b75f8
+Description:  cfg80211 is the Linux wireless LAN (802.11) configuration API.
+
+Package: kmod-crypto-acompress
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-crypto-acompress_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 4801
+SHA256sum: cf52004f8dc3115d564e364f92ae3d5ec9dffca2a568e8a4395625dd41a3b0e1
+Description:  Asynchronous Compression operations
+
+Package: kmod-crypto-aead
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-null
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-crypto-aead_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 986
+SHA256sum: 2ad64288466de1481d0d787a3730d81e825cc546cae788fdfd36c5ff4fa2c56b
+Description:  CryptoAPI AEAD support
+
+Package: kmod-crypto-authenc
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-manager, kmod-crypto-null
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 30720
+Filename: kmod-crypto-authenc_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 6288
+SHA256sum: a6eec5ec0a35ba3c8a170f447284b24d8a323c70100a0909d54424a413e1b36b
+Description:  Combined mode wrapper for IPsec
+
+Package: kmod-crypto-cbc
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-manager
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-crypto-cbc_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 956
+SHA256sum: db0f3030ee76ba02392553f54f1f3bf447a0bcba4d571c9d5cba33698b3dee88
+Description:  Cipher Block Chaining CryptoAPI module
+
+Package: kmod-crypto-ccm
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-ctr, kmod-crypto-aead
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-crypto-ccm_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 960
+SHA256sum: f70788ecd2eca228ba9edeaf00865677e57fc472599ff0225bf1a2d185465d09
+Description:  Support for Counter with CBC MAC (CCM)
+
+Package: kmod-crypto-cmac
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-hash
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-crypto-cmac_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 3272
+SHA256sum: 0a5473527b95a9c578cd954b53ba0146a9d89328b2c9f1886a9f3a69408f0ed4
+Description:  Support for Cipher-based Message Authentication Code (CMAC)
+
+Package: kmod-crypto-crc32c
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-hash
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-crypto-crc32c_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 994
+SHA256sum: b667e0d2a6b0fe824656e9b52c61a55fcc84543ff511699f23c1e8a772f3e1de
+Description:  CRC32c CRC module
+
+Package: kmod-crypto-ctr
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-manager, kmod-crypto-seqiv
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-crypto-ctr_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 951
+SHA256sum: 831110a4a82b933632ed19c1f2a1d4f8f2f80688bf361ee27b19daf0a5085a2d
+Description:  Counter Mode CryptoAPI module
+
+Package: kmod-crypto-deflate
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-lib-zlib-inflate, kmod-lib-zlib-deflate, kmod-crypto-acompress
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-crypto-deflate_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 3097
+SHA256sum: 95acac8b813fe80994b0fd6aa1531a25ada49288f5d064d12ed42f742ddd687d
+Description:  Deflate compression CryptoAPI module
+
+Package: kmod-crypto-des
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 40960
+Filename: kmod-crypto-des_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 9990
+SHA256sum: 410ae53bea3684fce4a47f8ca2519bf4e342ffd1687993c61ed9d58299248ffb
+Description:  DES/3DES cipher CryptoAPI module
+
+Package: kmod-crypto-echainiv
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-aead, kmod-crypto-geniv
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-crypto-echainiv_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 2627
+SHA256sum: 065f97524d30821669173c0d7993e20c439614234c7624f3967f1af0603c2c16
+Description:  Encrypted Chain IV Generator
+
+Package: kmod-crypto-gcm
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-ctr, kmod-crypto-ghash, kmod-crypto-null
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-crypto-gcm_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 955
+SHA256sum: a754f5423650cd3992a661766ca1575088e007c82733d54c9766af479292ba0f
+Description:  GCM/GMAC CryptoAPI module
+
+Package: kmod-crypto-geniv
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-rng, kmod-crypto-aead
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-crypto-geniv_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 961
+SHA256sum: 0306fbad02836558b735c98557c4d8b4cd5acf6800dc5a8a222422c6da7f5700
+Description:  CryptoAPI Shared IV generator
+
+Package: kmod-crypto-gf128
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-crypto-gf128_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 956
+SHA256sum: ba12c0c610b0f6058e0120d9d7d54d6e72703697dd107683c730ae5e381bcf64
+Description:  GF(2^128) multiplication functions CryptoAPI module
+
+Package: kmod-crypto-ghash
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-gf128, kmod-crypto-hash
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-crypto-ghash_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 967
+SHA256sum: 27619d53a9538e2b3824eafcdc2e45f409b26816034ef0c6d0fe95a1c81fa4bd
+Description:  GHASH digest CryptoAPI module
+
+Package: kmod-crypto-hash
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-crypto-hash_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 987
+SHA256sum: 7ac20c5fe5b4f4d0ff49ba7d6550810218dba1c37795c630877aef1728524b8e
+Description:  CryptoAPI hash support
+
+Package: kmod-crypto-hmac
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-hash, kmod-crypto-manager
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-crypto-hmac_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 952
+SHA256sum: 705af1964b420cdaca85bd693aea030e8c099a90d5c522eaad8982366561dc01
+Description:  HMAC digest CryptoAPI module
+
+Package: kmod-crypto-kpp
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-crypto-kpp_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 860
+SHA256sum: 4184262b6a345e02fddc44919251e45e199cf8bf157e171e6ae3e8c60b160659
+Description:  Key-agreement Protocol Primitives
+
+Package: kmod-crypto-lib-chacha20
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 30720
+Filename: kmod-crypto-lib-chacha20_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 6504
+SHA256sum: 19d24f94cb9df3400d4d0a53abd078a647f46dc4513f97ccab34f2c06eb703aa
+Description:  ChaCha library interface
+
+Package: kmod-crypto-lib-chacha20poly1305
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-lib-chacha20, kmod-crypto-lib-poly1305
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-crypto-lib-chacha20poly1305_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 4361
+SHA256sum: 20d348fe1db95be80f8e15f518ff356d5adad1b8ef4537a3f7511c8aaa73dbfe
+Description:  ChaCha20-Poly1305 AEAD support (8-byte nonce library version)
+
+Package: kmod-crypto-lib-curve25519
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-kpp
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 40960
+Filename: kmod-crypto-lib-curve25519_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 19567
+SHA256sum: ddb9c165093a7f88c8b7451b4efdc91f0c83b33b6b47636370764cd8643f5607
+Description:  Curve25519 scalar multiplication library
+
+Package: kmod-crypto-lib-poly1305
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-hash
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-crypto-lib-poly1305_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 5749
+SHA256sum: 8af25efe2bc592dbe1a9f8d3662b57d22bc53ff2f25a2c94d3bc304614431ab5
+Description:  Poly1305 library interface
+
+Package: kmod-crypto-manager
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-aead, kmod-crypto-hash
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-crypto-manager_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 1002
+SHA256sum: 40a4e704b54f6773f5d7470af880941c32645f4731e66730300d367525b4c0f2
+Description:  CryptoAPI algorithm manager
+
+Package: kmod-crypto-md5
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-hash
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-crypto-md5_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 4846
+SHA256sum: bf8e3af6baab8464dd9b3f265864644ca751b05699b067e213647ffc61c892ba
+Description:  MD5 digest CryptoAPI module
+
+Package: kmod-crypto-null
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-hash
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-crypto-null_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 949
+SHA256sum: f9a3d6adca54a52603322617713e53b90592a0f26ef15d8a8c29a56a2422862c
+Description:  Null CryptoAPI module
+
+Package: kmod-crypto-rng
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-hash, kmod-crypto-hmac, kmod-crypto-sha512, kmod-crypto-sha3
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-crypto-rng_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 984
+SHA256sum: 2fc5fc8cc7e501158ddf35c7ff60ab3fd1de282a724a7bc2b7698d7f3a47a3d0
+Description:  CryptoAPI random number generation
+
+Package: kmod-crypto-seqiv
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-aead, kmod-crypto-rng, kmod-crypto-geniv
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-crypto-seqiv_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 969
+SHA256sum: a0c29b5700c4af0c64f12e11f53ca4d6bb2a49bd060f7d633b52f9202f9fbd88
+Description:  CryptoAPI Sequence Number IV Generator
+
+Package: kmod-crypto-sha1
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-hash
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-crypto-sha1_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 958
+SHA256sum: 520b424ccece2b64a80ab694a284c4cbf4bcdbfa721cea2c839eaec36886ae7f
+Description:  SHA1 digest CryptoAPI module
+
+Package: kmod-crypto-sha3
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-hash
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-crypto-sha3_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 953
+SHA256sum: e1918023605e3155036042d091bc87bddd9aa201c126d13e3ac3237779770e87
+Description:  SHA3 digest CryptoAPI module
+
+Package: kmod-crypto-sha512
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-hash
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-crypto-sha512_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 971
+SHA256sum: a6fc39fa5a901dea8be51279e4d0c1559f49d041c78ef9005772748ed0115adc
+Description:  SHA512 digest CryptoAPI module
+
+Package: kmod-eeprom-93cx6
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-eeprom-93cx6_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 2855
+SHA256sum: e90a98f4c07c0995bdd918a28ee8cceb74a29596e155ec032cfefe5938b3c08a
+Description:  Kernel module for EEPROM 93CX6 support
+
+Package: kmod-fs-configfs
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-fs-configfs_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 942
+SHA256sum: ca234dbdc892793eb25debaeffb14c92087f3244d31e2b9b2ae164e93f720685
+Description:  Kernel module for configfs support
+
+Package: kmod-fs-vfat
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-nls-base, kmod-nls-cp437, kmod-nls-iso8859-1, kmod-nls-utf8
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 143360
+Filename: kmod-fs-vfat_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 47146
+SHA256sum: 68cc37a048f3f8f31da60c11018e05ebb887a246737e530afafcc4c1185f6f1b
+Description:  Kernel module for VFAT filesystem support
+
+Package: kmod-hid-generic
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-hid
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-hid-generic_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 2204
+SHA256sum: d7b76a2e7f1f001bceb680c3ab1f62ab12131e4d9313a4a8194113b265ee4869
+Description:  Generic HID device support
+
+Package: kmod-hid
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-input-core, kmod-input-evdev
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 194560
+Filename: kmod-hid_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 54153
+SHA256sum: 9756e5186fc17c98c84b9c796403fdc9fa7f0e5f9b4b031d765aeec39279ad56
+Description:  Kernel modules for HID devices
+
+Package: kmod-hwmon-core
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-hwmon-core_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 855
+SHA256sum: 5748b7abdd4ee62873aea45b5559e8ec961b24f1a575b21bfdcff2ebd9f7e55f
+Description:  Kernel modules for hardware monitoring
+
+Package: kmod-hwmon-pwmfan
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-hwmon-core, kmod-thermal
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-hwmon-pwmfan_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 5704
+SHA256sum: f206ca49b85e58089e4b71263d4c0bc675ec8e526262d3a294e242682cd141e3
+Description:  Kernel module for PWM controlled FANs
+
+Package: kmod-input-core
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-input-core_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 858
+SHA256sum: d2ddfc58a58e4a2cf933efb32c2341dd5bca61ac053dcf2321408ab675af9e7c
+Description:  Kernel modules for support of input device
+
+Package: kmod-input-evdev
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-input-core
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 40960
+Filename: kmod-input-evdev_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 10946
+SHA256sum: 180e139a7a41f86591788a7e60e5fe06d9c8fb002945889209bba9a159714e74
+Description:  Kernel modules for support of input device events
+
+Package: kmod-ipsec4
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-ipsec, kmod-iptunnel4
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 61440
+Filename: kmod-ipsec4_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 15051
+SHA256sum: abba9d51b2bf0819408be83006a8595364358baeb0c39e8fca122f3aee2c83eb
+Description:  Kernel modules for IPsec support in IPv4.
+ Includes:
+ - ah4
+ - esp4
+ - ipcomp4
+ - xfrm4_tunnel
+
+Package: kmod-ipsec6
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-ipsec, kmod-iptunnel6
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 61440
+Filename: kmod-ipsec6_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 17452
+SHA256sum: d22dbd268de0d54681ca483d1b0c6c1a0d64012d951c40f75fdd135b4d3919eb
+Description:  Kernel modules for IPsec support in IPv6.
+ Includes:
+ - ah6
+ - esp6
+ - ipcomp6
+ - xfrm6_tunnel
+
+Package: kmod-ipsec
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-authenc, kmod-crypto-cbc, kmod-crypto-deflate, kmod-crypto-des, kmod-crypto-echainiv, kmod-crypto-hmac, kmod-crypto-md5, kmod-crypto-sha1
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 133120
+Filename: kmod-ipsec_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 40894
+SHA256sum: 9c9b68c35a1ed99963234a7c5b1925dd66daac61e551db437866e27377b8b175
+Description:  Kernel modules for IPsec support in both IPv4 and IPv6.
+ Includes:
+ - af_key
+ - xfrm_algo
+ - xfrm_ipcomp
+ - xfrm_user
+
+Package: kmod-iptunnel4
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-iptunnel4_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 3152
+SHA256sum: d10adb74bf334a53a9f18adb18205efaa3d05b5f70583e854f460b223fd29a21
+Description:  Kernel modules for IPv4 tunneling
+
+Package: kmod-iptunnel6
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-iptunnel6_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 3322
+SHA256sum: 6aeaf1d11e76002cf976277899a55c6244d10db4978eb71c5eb53434f731b39d
+Description:  Kernel modules for IPv6 tunneling
+
+Package: kmod-lib-crc-ccitt
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-lib-crc-ccitt_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 3030
+SHA256sum: 7e117c3b7e83235614a5fc4cca0ba27c5f45d8eb8b64a4d631583f8916e4965a
+Description:  Kernel module for CRC-CCITT support
+
+Package: kmod-lib-crc-itu-t
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-lib-crc-itu-t_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 2356
+SHA256sum: 30aafefab1ee0db9bfdf5a18e57b25f9f764acf168f3367498976a3834ee8019
+Description:  Kernel module for CRC ITU-T V.41 support
+
+Package: kmod-lib-crc32c
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-crc32c
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-lib-crc32c_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 2227
+SHA256sum: 9336891075ebd8c12fdb68840a2168f4bc175cc2ea345310896737af5dc28f43
+Description:  Kernel module for CRC32 support
+
+Package: kmod-lib-zlib-deflate
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 30720
+Filename: kmod-lib-zlib-deflate_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 11294
+SHA256sum: 263176931ece587e31217e2060e69bf41a5370b4180ff2f75596c02913f4ca4e
+Description:  Zlib support
+
+Package: kmod-lib-zlib-inflate
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 30720
+Filename: kmod-lib-zlib-inflate_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 9524
+SHA256sum: 435bc23c0995f74d04ae3683e5847d6c7524cc14d36c46c39c837730cef93a72
+Description:  Zlib support
+
+Package: kmod-mac80211
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-cfg80211, kmod-crypto-cmac, kmod-crypto-ccm, kmod-crypto-gcm, hostapd-common
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 1013760
+Filename: kmod-mac80211_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 360480
+SHA256sum: 880bff9b908b11cd30d69981a63390b65596ef40ad5328016407ae5a2553cf47
+Description:  Generic IEEE 802.11 Networking Stack (mac80211)
+
+Package: kmod-mmc
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-mmc_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 990
+SHA256sum: f893f7fee77379cae817c5cfca39054209825cd376f5eb4abc7a3a6c5cf9a383
+Description:  Kernel support for MMC/SD cards
+
+Package: kmod-nf-conntrack6
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-nf-conntrack
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-nf-conntrack6_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 855
+SHA256sum: a86c57504ff1ddc54bbcdb08d3ce06ddef4887e7885c86fe4966ac152219a4ce
+Description:  Netfilter IPv6 connection tracking
+
+Package: kmod-nf-conntrack
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 184320
+Filename: kmod-nf-conntrack_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 53049
+SHA256sum: 65b012d99b1c32bb167d9dfcc66a7b688a6963ecbdc5528ce4ff877289379fa9
+Description:  Netfilter connection tracking
+
+Package: kmod-nf-flow
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-nf-conntrack
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 51200
+Filename: kmod-nf-flow_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 16653
+SHA256sum: a7c242ae1f4af3a17460f429e0b4ed5391aec176e1478c58ce2fad79eb975bf8
+Description:  Netfilter flowtable support
+
+Package: kmod-nf-log6
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-nf-log
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-nf-log6_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 853
+SHA256sum: 23b5eadf77abad2296fddcd1982346e0acd2957c43751440aea543d12804d187
+Description:  Netfilter IPV6 Logging
+
+Package: kmod-nf-log
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 40960
+Filename: kmod-nf-log_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 8658
+SHA256sum: fad200b8516d7fa2f9a11ed9cc908703755c49269a3f79681cd2212626181afa
+Description:  Netfilter Logging
+
+Package: kmod-nf-nat
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-nf-conntrack
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 51200
+Filename: kmod-nf-nat_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 16545
+SHA256sum: 427aa2c9f15b974c09ce128b3d54aa375bf5c1ff1d2f42c63bb42806ab542335
+Description:  Netfilter NAT
+
+Package: kmod-nf-reject6
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-nf-reject6_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 4846
+SHA256sum: 8ee81ecb970fd3436f7a37a875c8d5fc26b3d62e68f1fe55b9bb5313d6b378d3
+Description:  Netfilter IPv6 reject support
+
+Package: kmod-nf-reject
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-nf-reject_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 4361
+SHA256sum: ecdc359e32bb0e82956be9046854f6cc997c0b3d1f46b4ad51272dbdbfb34123
+Description:  Netfilter IPv4 reject support
+
+Package: kmod-nfnetlink
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 30720
+Filename: kmod-nfnetlink_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 6181
+SHA256sum: 7b5a9a9fed2df624280b67b98a58fe2a6fd4627bcf2af47fd20ca07fdadc7d9c
+Description:  Kernel modules support for a netlink-based userspace interface
+
+Package: kmod-nft-core
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-nfnetlink, kmod-nf-reject, kmod-nf-reject6, kmod-nf-conntrack6, kmod-nf-nat, kmod-nf-log, kmod-nf-log6, kmod-lib-crc32c
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 399360
+Filename: kmod-nft-core_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 129721
+SHA256sum: ba84457a2fb96b7bd0c154f9d82608a0849cbcdcc63c001ddcaf32d22737730c
+Description:  Kernel module support for nftables
+
+Package: kmod-nft-fib
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-nft-core
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 40960
+Filename: kmod-nft-fib_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 7225
+SHA256sum: 88458cba04a0dbe129252aa9461813082cbf796770112300bf6a883e945e29e9
+Description:  Netfilter nf_tables fib support
+
+Package: kmod-nft-nat
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-nft-core, kmod-nf-nat
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 30720
+Filename: kmod-nft-nat_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 5627
+SHA256sum: 48ee4764babaa51a07ea5a238b410888dcac03c56d769c6ba5f232e5ad057c4a
+Description:  Netfilter nf_tables NAT support
+
+Package: kmod-nft-offload
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-nf-flow, kmod-nft-nat
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 30720
+Filename: kmod-nft-offload_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 5944
+SHA256sum: ef3e03f89317de57cff8a1c2fec5c02983104f2e06563d8d6f96772b2698f799
+Description:  Netfilter nf_tables routing/NAT offload support
+
+Package: kmod-nls-base
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-nls-base_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 860
+SHA256sum: 1d72b326f58aa42407b396b18f57b90bdc9775a3438c0e844ec3896ea7a0575d
+Description:  Kernel module for NLS (Native Language Support)
+
+Package: kmod-nls-cp437
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-nls-base
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-nls-cp437_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 3143
+SHA256sum: ac2f78fed66a1291b24de75cdb56d40ccf3628362c435be1a6a4dc22d15a78b9
+Description:  Kernel module for NLS Codepage 437 (United States, Canada)
+
+Package: kmod-nls-iso8859-1
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-nls-base
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-nls-iso8859-1_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 2804
+SHA256sum: 4e12fe21a5c363cb9e8460b818e21976b5be53dce06c4fe290327ff531b25557
+Description:  Kernel module for NLS ISO 8859-1 (Latin 1)
+
+Package: kmod-nls-utf8
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-nls-base
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-nls-utf8_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 2075
+SHA256sum: 845baff5ed7d995edda278746e9b1e522b83cc6a7e473c1d1258ee014eb11f9e
+Description:  Kernel module for NLS UTF-8
+
+Package: kmod-ppp
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-lib-crc-ccitt, kmod-slhc
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 102400
+Filename: kmod-ppp_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 29351
+SHA256sum: 0054b57cb0281ffd62b5d3ffad71449adb7f68853fbeebf9196e02646bba73ce
+Description:  Kernel modules for PPP support
+
+Package: kmod-pppoe
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-ppp, kmod-pppox
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 30720
+Filename: kmod-pppoe_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 9034
+SHA256sum: ccf1f2e29b888fea7496939b7b2e0122191b7b8663bf05468f7febb43e1b5f15
+Description:  Kernel module for PPPoE (PPP over Ethernet) support
+
+Package: kmod-pppox
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-ppp
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-pppox_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 3026
+SHA256sum: 29276c3de7e0da6c9bab58500c22724682468c3afc287576283ba441225f373a
+Description:  Kernel helper module for PPPoE and PPTP support
+
+Package: kmod-rsi91x-sdio
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-mac80211, kmod-mmc, kmod-rsi91x, rs9113-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 51200
+Filename: kmod-rsi91x-sdio_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 12229
+SHA256sum: 5b0835f1584ad60372f06c3b1912a7775bc73519c11943765d81271ab4773086
+Description:  Redpine Signals SDIO bus support
+
+Package: kmod-rsi91x-usb
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-usb-core, kmod-mac80211, kmod-rsi91x, rs9113-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 30720
+Filename: kmod-rsi91x-usb_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 7554
+SHA256sum: 7a2db4301bbafb8974121d9432312336d5506b0502f1ff2a516cc7a5071d837a
+Description:  Redpine Signals USB bus support
+
+Package: kmod-rsi91x
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-mac80211, rs9113-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 112640
+Filename: kmod-rsi91x_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 33585
+SHA256sum: f33c11b76e3df9219ebaa0a98488bc93209bbeec12b885c3eedf8fbfd60657b1
+Description:  Redpine Signals Inc 91x WLAN driver support
+
+Package: kmod-rt2800-lib
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rt2x00-lib, kmod-lib-crc-ccitt
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 153600
+Filename: kmod-rt2800-lib_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 55584
+SHA256sum: a31ff8bd7c0e2c33147764dfdd1a6e3c59d9331c6d29f044b7b3b2cc3840d80c
+Description:  Ralink Drivers for RT2x00 cards (rt2800 LIB)
+
+Package: kmod-rt2800-mmio
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rt2800-lib, kmod-rt2x00-mmio
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 30720
+Filename: kmod-rt2800-mmio_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 6424
+SHA256sum: ba49c812d3ba2623b0aa9e9d7626bea00e1982aa5872721d257b6a78004df81e
+Description:  Ralink Drivers for RT2x00 cards (RT28xx/RT3xxx MMIO)
+
+Package: kmod-rt2800-pci
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rt2x00-pci, kmod-rt2800-lib, kmod-rt2800-mmio, kmod-eeprom-93cx6, rt2800-pci-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 30720
+Filename: kmod-rt2800-pci_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 5166
+SHA256sum: e65c8877c2e40eb4b8a687ad3765585febe8d97b2be672eda12aaf497ec93a5e
+Description:  Ralink Drivers for RT2x00 cards (RT2860 PCI)
+
+Package: kmod-rt2800-usb
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rt2x00-usb, kmod-rt2800-lib, kmod-lib-crc-ccitt, rt2800-usb-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 40960
+Filename: kmod-rt2800-usb_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 7937
+SHA256sum: 85b82563d2c32e9d5309bbd57342d222c5c2822043fc56809aacd97da9ee39e7
+Description:  Ralink Drivers for RT2x00 cards (RT2870 USB)
+
+Package: kmod-rt2x00-lib
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-mac80211
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 81920
+Filename: kmod-rt2x00-lib_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 26000
+SHA256sum: 180d0570f55b588e3192d333baa0f59983f722828bf127ad479745f1b4a4dd90
+Description:  Ralink Drivers for RT2x00 cards (LIB)
+
+Package: kmod-rt2x00-mmio
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rt2x00-lib
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-rt2x00-mmio_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 3213
+SHA256sum: 820dacce53abdfee6bab21ebfd5f5f558ecc8f31b26b0694bca59840a84960c0
+Description:  Ralink Drivers for RT2x00 cards (MMIO)
+
+Package: kmod-rt2x00-pci
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rt2x00-mmio, kmod-rt2x00-lib
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-rt2x00-pci_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 3031
+SHA256sum: 7f53cfc67b880e81b9f824e2254413bb57b57dc4746f244e06ed4d1703a9959a
+Description:  Ralink Drivers for RT2x00 cards (PCI)
+
+Package: kmod-rt2x00-usb
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rt2x00-lib, kmod-usb-core
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 30720
+Filename: kmod-rt2x00-usb_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 7865
+SHA256sum: 5e4efd00df2420bbc316c3ec60ed149d5fc78663df943e77320a3e9015ba3f0c
+Description:  Ralink Drivers for RT2x00 cards (USB)
+
+Package: kmod-rt61-pci
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rt2x00-pci, kmod-eeprom-93cx6, kmod-lib-crc-itu-t, rt61-pci-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 51200
+Filename: kmod-rt61-pci_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 14253
+SHA256sum: bbf02d4481859e7a9c4bd848cd396a71654f27dc793bf5cbe6a1e06e3fefe413
+Description:  Ralink Drivers for RT2x00 cards (RT2x61 PCI)
+
+Package: kmod-rt73-usb
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rt2x00-usb, kmod-lib-crc-itu-t, rt73-usb-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 51200
+Filename: kmod-rt73-usb_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 12464
+SHA256sum: 01e0c5f57cbb889b81dfc59d9aa9b6d41c52e921a20497d69ed926431bd39a16
+Description:  Ralink Drivers for RT2x00 cards (RT73 USB)
+
+Package: kmod-rtl8192c-common
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtlwifi
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 71680
+Filename: kmod-rtl8192c-common_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 23951
+SHA256sum: b8be6c0789c7280465b1a6e91ba3c5433eff764ef7c1cd2b90ac3065aa96fa1f
+Description:  Realtek RTL8192CE/RTL8192CU common support module
+
+Package: kmod-rtl8192ce
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtlwifi-pci, kmod-rtl8192c-common, rtl8192ce-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 92160
+Filename: kmod-rtl8192ce_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 29650
+SHA256sum: 57c72ce8d759e7a608528b65a2cc8fc150f3d23d94c67cf73cc0c8c9807e8463
+Description:  Realtek RTL8192CE/RTL8188CE support
+
+Package: kmod-rtl8192cu
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtlwifi-usb, kmod-rtl8192c-common, rtl8192cu-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 112640
+Filename: kmod-rtl8192cu_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 32414
+SHA256sum: cb7726a9eefb010648a5ee61d0f45692cec09a2c94e95ea0e83dce429e326eab
+Description:  Realtek RTL8192CU/RTL8188CU support
+
+Package: kmod-rtl8192d-common
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtlwifi
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 81920
+Filename: kmod-rtl8192d-common_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 28470
+SHA256sum: 78c4bd14df37dc8120d248c8ae9ee8ff7ad3d38a84a912ff34137fb05df8d141
+Description:  Realtek RTL8192DE/RTL8192DU common support module
+
+Package: kmod-rtl8192de
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtlwifi-pci, kmod-rtl8192d-common, rtl8192de-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 122880
+Filename: kmod-rtl8192de_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 37488
+SHA256sum: 2818284fe64d7daea910d6dc3a4856769279953cf84340d6a124d00ed317c329
+Description:  Realtek RTL8192DE/RTL8188DE support
+
+Package: kmod-rtl8192du
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtlwifi-usb, kmod-rtl8192d-common, rtl8192du-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 122880
+Filename: kmod-rtl8192du_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 35554
+SHA256sum: 13c605e1bb155ba5ff6568187782845f06105e3f95d500f06efbf7d2c689a20d
+Description:  Realtek RTL8192DU support
+
+Package: kmod-rtl8192se
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtlwifi-pci, rtl8192se-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 112640
+Filename: kmod-rtl8192se_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 36407
+SHA256sum: d6a2f089dafa044619551cc00bbcde324049a36a6dd3ee544a36f700a8395dae
+Description:  Realtek RTL8192SE/RTL8191SE support
+
+Package: kmod-rtl8723-common
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtlwifi
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 30720
+Filename: kmod-rtl8723-common_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 6961
+SHA256sum: e58dfb7f5747fae3a618e6497f8b3a231825787285bdb5a9cba13b065fc807a3
+Description:  Realtek RTL8723AE/RTL8723BE common support module
+
+Package: kmod-rtl8723be
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtlwifi-btcoexist, kmod-rtlwifi-pci, kmod-rtl8723-common, rtl8723be-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 133120
+Filename: kmod-rtl8723be_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 47125
+SHA256sum: 1f241a5a8566247a121db6f6afc8ba6c4b35778cc46963bfc755b02c9b1d20b0
+Description:  Realtek RTL8723AE/RTL8723BE support
+
+Package: kmod-rtl8723bs
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-mmc, kmod-mac80211
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 614400
+Filename: kmod-rtl8723bs_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 212953
+SHA256sum: b095119f86d501d1b0ccb8e7960ad4afe362129e4de3ddfceae0f0140542dcc9
+Description:  This option enables support for RTL8723BS SDIO drivers, such as the wifi found
+ on the 1st gen Intel Compute Stick, the CHIP and many other Intel Atom and ARM
+ based devices.
+
+Package: kmod-rtl8812au-ct
+Version: 6.6.86.2022.10.26~9b2b203a-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-cfg80211, kmod-usb-core
+Provides: kmod-rtl8812au
+Source: feeds/base/kernel/rtl8812au-ct
+SourceName: rtl8812au-ct
+License: GPLv2
+Section: kernel
+SourceDateEpoch: 1720873536
+Maintainer: Ben Greear <greearb@candelatech.com>
+Architecture: aarch64_cortex-a76
+Installed-Size: 2385920
+Filename: kmod-rtl8812au-ct_6.6.86.2022.10.26~9b2b203a-r1_aarch64_cortex-a76.ipk
+Size: 517738
+SHA256sum: 9631884f59ae552a2ce103c0c90a8914b09de5ef406e926d86412d304de3e0c1
+Description:  Driver for Realtek 8812 AU devices comfast 912-ac, etc
+
+Package: kmod-rtl8821ae
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtlwifi-btcoexist, kmod-rtlwifi-pci, rtl8821ae-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 501760
+Filename: kmod-rtl8821ae_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 89078
+SHA256sum: bb1db45a5cb444d4f80f511b66cd7f5a1bc96ffae61834ac460e1774f3edb945
+Description:  Realtek RTL8821AE support
+
+Package: kmod-rtl8xxxu
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-usb-core, kmod-mac80211
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 296960
+Filename: kmod-rtl8xxxu_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 75810
+SHA256sum: 18b6b8be02650f3cbc0ef0c4e2def424ca297bd27f4213b829f84004a703797b
+Description:  This is an alternative driver for various Realtek RTL8XXX
+ parts written to utilize the Linux mac80211 stack.
+ The driver is known to work with a number of RTL8723AU,
+ RL8188CU, RTL8188RU, RTL8191CU, and RTL8192CU devices
+ 
+ This driver is under development and has a limited feature
+ set. In particular it does not yet support 40MHz channels
+ and power management. However it should have a smaller
+ memory footprint than the vendor drivers and benetifs
+ from the in kernel mac80211 stack.
+ 
+ It can coexist with drivers from drivers/staging/rtl8723au,
+ drivers/staging/rtl8192u, and drivers/net/wireless/rtlwifi,
+ but you will need to control which module you wish to load.
+ 
+ RTL8XXXU_UNTESTED is enabled
+ This option enables detection of Realtek 8723/8188/8191/8192 WiFi
+ USB devices which have not been tested directly by the driver
+ author or reported to be working by third parties.
+ 
+ Please report your results!
+
+Package: kmod-rtlwifi-btcoexist
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtlwifi
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 276480
+Filename: kmod-rtlwifi-btcoexist_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 73173
+SHA256sum: fe3e6e0e9ebf4bdbcdc1e891b585cf8c945236020e5c5145725a184773bc1d0d
+Description:  Realtek BT coexist support
+
+Package: kmod-rtlwifi-pci
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtlwifi
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 51200
+Filename: kmod-rtlwifi-pci_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 16779
+SHA256sum: 4ca33f1acf226ecfaf72c89453de75b9d5f175df3bed7da23e7bb4c85f04c848
+Description:  Realtek common driver part (PCI support)
+
+Package: kmod-rtlwifi-usb
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-usb-core, kmod-rtlwifi
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 30720
+Filename: kmod-rtlwifi-usb_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 8583
+SHA256sum: b863f2b8a34366b93b69ccabf488c29106250d122900b644e180c70390f5fd7a
+Description:  Realtek common driver part (USB support)
+
+Package: kmod-rtlwifi
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-mac80211
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 153600
+Filename: kmod-rtlwifi_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 48765
+SHA256sum: 7e7422fba562182a2897e27f80fd834e431d50837daecb43a3aa7ce309cc9d5b
+Description:  Realtek common driver part
+
+Package: kmod-rtw88-8723d
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw88-8723x, rtl8723de-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 51200
+Filename: kmod-rtw88-8723d_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 13242
+SHA256sum: 96dfa2121c8b2a25dfc769fea34b835e495065902bad1bd2f86f54576f18fd68
+Description:  Realtek RTL8723D family support
+
+Package: kmod-rtw88-8723de
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw88-pci, kmod-rtw88-8723d
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-rtw88-8723de_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 2069
+SHA256sum: a7062f9a63957bd06ceb7bb740cce7d822bee8491a024ad0c96914c55c135b7f
+Description:  Realtek RTL8723DE support
+
+Package: kmod-rtw88-8723ds
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw88-sdio, kmod-rtw88-8723d
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-rtw88-8723ds_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 2041
+SHA256sum: d78dd2e0d9de031a70204c4d689a53273889332aa8c3dcbfba14e67cb0a3ea23
+Description:  Realtek RTL8723DS support
+
+Package: kmod-rtw88-8723du
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw88-usb, kmod-rtw88-8723d
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-rtw88-8723du_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 2089
+SHA256sum: c875249d0a6b528618a45ce58cea61e01d1d2c76c1e290337ce0202292660b8a
+Description:  Realtek RTL8723DU support
+
+Package: kmod-rtw88-8723x
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw88
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-rtw88-8723x_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 4975
+SHA256sum: 74bcfea3ad97b280e704451b3972a3260dbc88bfb1caff983a5aa86d6a02456b
+Description:  Realtek RTL8723x family support
+
+Package: kmod-rtw88-8812a
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw88-88xxa
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 51200
+Filename: kmod-rtw88-8812a_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 12274
+SHA256sum: 0687e0378c4b2529fb886a8b9ff9062de6ef7ee0bbcbd288d91a4a52cdbcfe4a
+Description:  Realtek RTL8812A family support
+
+Package: kmod-rtw88-8812au
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw88-8812a, rtl8812a-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-rtw88-8812au_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 2335
+SHA256sum: 88d325fe176b8e5d233400ebd40287068841a44f21923d5e5180285641afbd8a
+Description:  Realtek RTL8812AU support
+
+Package: kmod-rtw88-8821a
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw88-88xxa
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 40960
+Filename: kmod-rtw88-8821a_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 10893
+SHA256sum: 8e4112fe1c108971e14ab2534b88427b0b73878d6e86ce77be4512d1261479a5
+Description:  Realtek RTL8821A family support
+
+Package: kmod-rtw88-8821au
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw88-8821a, rtl8821a-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-rtw88-8821au_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 2264
+SHA256sum: b454ac9386f96a41661e36c931caab5f038c9dd2a9cc0e2a824a076150900550
+Description:  Realtek RTL8821AU support
+
+Package: kmod-rtw88-8821c
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw88, rtl8821ce-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 92160
+Filename: kmod-rtw88-8821c_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 21696
+SHA256sum: cf8ac4731f5073221d68a7b6c082c944778bbe116d10f50d3cdbe75b59967f8b
+Description:  Realtek RTL8821C family support
+
+Package: kmod-rtw88-8821ce
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw88-pci, kmod-rtw88-8821c
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-rtw88-8821ce_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 2083
+SHA256sum: 0ee7fc671c7e04cead6abd7e32b0b7b7a182582856ea53e05b528005a7817e79
+Description:  Realtek RTL8821CE support
+
+Package: kmod-rtw88-8821cu
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw88-usb, kmod-rtw88-8821c
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-rtw88-8821cu_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 2174
+SHA256sum: 3cb46b96346e8d6eb9b5bfc02975f29b4f7b671ba61dade6d222ed0c63b85d5e
+Description:  Realtek RTL8821CU support
+
+Package: kmod-rtw88-8822b
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw88, rtl8822be-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 225280
+Filename: kmod-rtw88-8822b_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 33744
+SHA256sum: 5281287f897ff39e33b011a241f404d9a9b342e49b0e048a2c604a3ecfd88a1f
+Description:  Realtek RTL8822B family support
+
+Package: kmod-rtw88-8822be
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw88-pci, kmod-rtw88-8822b
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-rtw88-8822be_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 2076
+SHA256sum: 3930b0e4b6cc8c60d359bc27e5ae91b5cb7974c65a2903b42241011d2bdab5a3
+Description:  Realtek RTL8822BE support
+
+Package: kmod-rtw88-8822bu
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw88-usb, kmod-rtw88-8822b
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-rtw88-8822bu_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 2315
+SHA256sum: b8e650bde53c93af4bb32dcbd76097ade81593922eb5004b92b79cfd4819a6f4
+Description:  Realtek RTL8822BU support
+
+Package: kmod-rtw88-8822c
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw88, rtl8822ce-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 481280
+Filename: kmod-rtw88-8822c_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 55175
+SHA256sum: 366b7e80c6f4f83ec2344e8711fa804871be67bb466cf262b1b767cc6e951837
+Description:  Realtek RTL8822C family support
+
+Package: kmod-rtw88-8822ce
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw88-pci, kmod-rtw88-8822c
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-rtw88-8822ce_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 2082
+SHA256sum: 6e5c67f8ac7df38b952b9930d6262914a20f94f7684e41191d626fa77e8eb1f9
+Description:  Realtek RTL8822CE support
+
+Package: kmod-rtw88-8822cu
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw88-usb, kmod-rtw88-8822c
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-rtw88-8822cu_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 2133
+SHA256sum: b700493972512a4fbedd2177409af97b87d95b014182037451a873e6cf7bf6ff
+Description:  Realtek RTL8822CU support
+
+Package: kmod-rtw88-88xxa
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw88-usb
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 40960
+Filename: kmod-rtw88-88xxa_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 12118
+SHA256sum: 0ee7f70bbf13b1c6a2127c6dbfa6e4e3ee04cdd2b6b953bb6d2f7f953eb75c34
+Description:  Realtek RTL8812A/RTL8821A family support
+
+Package: kmod-rtw88-pci
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw88
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 40960
+Filename: kmod-rtw88-pci_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 11787
+SHA256sum: 43b9c9de821f3bad9613b9a05c94d8ba4d17a620156785096614d59c6410abcf
+Description:  Realtek RTW88 PCI chips support
+
+Package: kmod-rtw88-sdio
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-mmc, kmod-rtw88
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 30720
+Filename: kmod-rtw88-sdio_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 8259
+SHA256sum: 8e3c944d980c748526fe39c387da283ff86785455614a3fbfe1f439e89ed53fa
+Description:  Realtek RTW88 SDIO chips support
+
+Package: kmod-rtw88-usb
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw88, kmod-usb-core
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 30720
+Filename: kmod-rtw88-usb_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 7874
+SHA256sum: 30d6f15044bcaa71f8adc3023ebe81e072ed8007d4bebb7c8479979e0eeb3b0b
+Description:  Realtek RTW88 USB chips support
+
+Package: kmod-rtw88
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-mac80211
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 204800
+Filename: kmod-rtw88_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 74498
+SHA256sum: 6309fc1b89aa22d96a39cf02a6614d517d7939339aa145ec9967ec7533a5a6a5
+Description:  Realtek RTW88 common part
+
+Package: kmod-rtw89-8851be
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw89-pci, rtl8851be-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 358400
+Filename: kmod-rtw89-8851be_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 61446
+SHA256sum: 1d06104261ba521481528c4845fe3d206eb511e1c7c90a4bd6ee8b362fc311be
+Description:  Realtek RTL8851BE support
+
+Package: kmod-rtw89-8852ae
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw89-pci, rtl8852ae-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 747520
+Filename: kmod-rtw89-8852ae_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 76053
+SHA256sum: ac2cc28b07c4896172ba0c1eead3e8a8de3314bc6f493fc51ef0f003f1536ee8
+Description:  Realtek RTL8852AE support
+
+Package: kmod-rtw89-8852b-common
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw89-pci
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 102400
+Filename: kmod-rtw89-8852b-common_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 19488
+SHA256sum: e5d333ef8de89c0675484a8e41af19d69faca111c961f0980139c5461eec5bec
+Description:  Realtek RTL8852B family support
+
+Package: kmod-rtw89-8852be
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw89-8852b-common, rtl8852be-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 378880
+Filename: kmod-rtw89-8852be_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 58177
+SHA256sum: c02b8648f3a1134dbee446dac3acca5a6e8a1dccb5f41de2541ff47e2440f365
+Description:  Realtek RTL8852BE support
+
+Package: kmod-rtw89-8852ce
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw89-pci, rtl8852ce-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 1013760
+Filename: kmod-rtw89-8852ce_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 90956
+SHA256sum: b147eb9dd76315434241fb41f29d9b27b88ca376a61b02d7e60eda1460ca87a5
+Description:  Realtek RTL8852CE support
+
+Package: kmod-rtw89-8922ae
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw89-pci, rtl8922ae-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 92160
+Filename: kmod-rtw89-8922ae_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 20829
+SHA256sum: 4d67ec0c218eebfe48888015b404bd4afe42f8da49929e5856e13d8e6bd06657
+Description:  Realtek RTL8922AE support
+
+Package: kmod-rtw89-pci
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-rtw89
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 81920
+Filename: kmod-rtw89-pci_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 25824
+SHA256sum: 42f805082c963524779997d1b2d752d437b4f205443124205f0e764778e62f54
+Description:  Realtek RTW89 PCI chips support
+
+Package: kmod-rtw89
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-mac80211
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 901120
+Filename: kmod-rtw89_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 278888
+SHA256sum: d3be1e1e0c77fc59fd7191c41adcf366262ed4f11141e5838db99b710b954c3f
+Description:  Realtek RTW89 core
+
+Package: kmod-slhc
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-lib-crc-ccitt
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-slhc_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 4603
+SHA256sum: b9bd95352ab40a4ba5f0d7fcfeaec838ba4dd8bded69912226b9d2340b485f55
+Description:  Serial Line Header Compression
+
+Package: kmod-sound-arm-bcm2835
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-sound-core
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 40960
+Filename: kmod-sound-arm-bcm2835_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 9281
+SHA256sum: e8ecfeb7c86061d7754435c64c3e78745c617933956b8538e4e5cbf784e2bdc3
+Description:  This package contains the BCM2835 ALSA pcm card driver
+
+Package: kmod-sound-core
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-input-core
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 552960
+Filename: kmod-sound-core_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 172102
+SHA256sum: db48c1cbbb596063089b32670818664ca380eabbe8a63b6da9b773b0ca33a5ff
+Description:  Kernel modules for sound support
+
+Package: kmod-thermal
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-hwmon-core
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-thermal_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 929
+SHA256sum: d9e49385893e83c5135e90c1a1e92fe2a856c4ae5808b3fba4bc989d67d146d7
+Description:  Thermal driver offers a generic mechanism for thermal management.
+ Usually it's made up of one or more thermal zone and cooling device.
+
+Package: kmod-tun
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 81920
+Filename: kmod-tun_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 26756
+SHA256sum: 520278974d89ee5cd156b1f3df683132769e4ed57e9f372bf9095ff986682869
+Description:  Kernel support for the TUN/TAP tunneling device
+
+Package: kmod-udptunnel4
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 30720
+Filename: kmod-udptunnel4_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 9240
+SHA256sum: 7b9771f27684eb8637e4b27cda598082c54e0130e36ad0c8a850d7821faef0a2
+Description:  IPv4 UDP tunneling support
+
+Package: kmod-udptunnel6
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1)
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 20480
+Filename: kmod-udptunnel6_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 2887
+SHA256sum: 86b70c49563f788b0e731e08b37c4addc16be9d9faf6d90969115923bfa4c579
+Description:  IPv6 UDP tunneling support
+
+Package: kmod-usb-core
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-nls-base
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-usb-core_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 986
+SHA256sum: 9ea213a7a515dfed569c8b53e73a67f3086a0d086efc7ded58fb562dd7186775
+Description:  Kernel support for USB
+
+Package: kmod-usb-gadget-eth
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-usb-gadget, kmod-usb-lib-composite, kmod-usb-core
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 102400
+Filename: kmod-usb-gadget-eth_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 24662
+SHA256sum: 5b08813023b6382ad93c9bf408ef8f4e2db7f5a4f0bd17b080f739069fe9552b
+Description:  Kernel support for USB Ethernet Gadget
+
+Package: kmod-usb-gadget-ncm
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-usb-gadget, kmod-usb-lib-composite, kmod-usb-gadget-eth, kmod-usb-core
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 40960
+Filename: kmod-usb-gadget-ncm_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 10673
+SHA256sum: 086937f6f5667a1076f52c2e5c611713285e06aaae0fcbd19bf18ffe14b0f3e6
+Description:  Kernel support for USB Network Control Model (NCM) Gadget
+
+Package: kmod-usb-gadget-serial
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-usb-gadget, kmod-usb-lib-composite, kmod-usb-core
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 71680
+Filename: kmod-usb-gadget-serial_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 15780
+SHA256sum: 2ba6bc7ad3b22182b48ac50671e581116973b0e7beb5c105f328cbb9441a7dfb
+Description:  Kernel support for USB Serial Gadget.
+
+Package: kmod-usb-gadget
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-usb-core
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: kmod-usb-gadget_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 997
+SHA256sum: 4ab34efb9cdb73eeb6b11be9160bd7fa634b59a4f5e52796bd1f3c1a01d7b70d
+Description:  Kernel support for USB Gadget mode
+
+Package: kmod-usb-hid
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-hid, kmod-hid-generic, kmod-input-evdev, kmod-usb-core
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 61440
+Filename: kmod-usb-hid_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 18553
+SHA256sum: c6a32413bd199dcaba83c4a5e8396429dd3badc325f40d53eec4fd039255f3c9
+Description:  Kernel support for USB HID devices such as keyboards and mice
+
+Package: kmod-usb-lib-composite
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-usb-gadget, kmod-fs-configfs, kmod-usb-core
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 92160
+Filename: kmod-usb-lib-composite_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 26198
+SHA256sum: e60cf58c169493a8da8fd89825a17ea888fddc474c9a5d9311d141955c6ef64b
+Description:  Lib Composite
+
+Package: kmod-wil6210
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-mac80211, wil6210-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 460800
+Filename: kmod-wil6210_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 133798
+SHA256sum: bf7242fdc0b9fd3a6e5302c82622c261a822d33e287c2f5b3e07298ef6281872
+Description:  QCA/Wilocity 60g WiFi card wil6210 support
+
+Package: kmod-wireguard
+Version: 6.6.86-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-crypto-lib-chacha20poly1305, kmod-crypto-lib-curve25519, kmod-udptunnel4, kmod-udptunnel6
+Source: feeds/base/kernel/linux
+SourceName: kernel
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1744309960
+Architecture: aarch64_cortex-a76
+Installed-Size: 112640
+Filename: kmod-wireguard_6.6.86-r1_aarch64_cortex-a76.ipk
+Size: 36880
+SHA256sum: 5dea771ee564edfb118b0fb82f348491e729387247d83357254c5582fc4b383f
+Description:  WireGuard is a novel VPN that runs inside the Linux Kernel and utilizes
+ state-of-the-art cryptography. It aims to be faster, simpler, leaner, and
+ more useful than IPSec, while avoiding the massive headache. It intends to
+ be considerably more performant than OpenVPN.  WireGuard is designed as a
+ general purpose VPN for running on embedded interfaces and super computers
+ alike, fit for many different circumstances. It uses UDP.
+
+Package: kmod-wl12xx
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-wlcore, wl12xx-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/en/users/drivers/wl12xx
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 112640
+Filename: kmod-wl12xx_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 19288
+SHA256sum: a5445c4cc2564117727b3523e3d11ef9d0d4f03d2f2ff68926958464e4cb06e4
+Description:  Kernel modules for TI WL12xx
+
+Package: kmod-wl18xx
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-wlcore, wl18xx-firmware
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/en/users/drivers/wl18xx
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 163840
+Filename: kmod-wl18xx_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 25544
+SHA256sum: 20c3c63b0409503a12f14254834db689db13b72605de2b0ad7f01c70eeb73562
+Description:  Kernel modules for TI WL18xx
+
+Package: kmod-wlcore
+Version: 6.6.86.6.12.6-r1
+Depends: kernel (=6.6.86~2881a62db6eb87e8ffe0b4b8238886de-r1), kmod-mmc, kmod-mac80211
+Source: feeds/base/kernel/mac80211
+SourceName: mac80211
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: kernel
+SourceDateEpoch: 1743582207
+URL: https://wireless.wiki.kernel.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 348160
+Filename: kmod-wlcore_6.6.86.6.12.6-r1_aarch64_cortex-a76.ipk
+Size: 94052
+SHA256sum: fd76663066da8f7f52aa1fcdf8a6acdb20f09facc033e9992428a36f69dd7894
+Description:  This module contains some common parts needed by TI Wireless drivers.
+
+Package: libatomic1
+Version: 13.3.0-r4
+Depends: libgcc1
+Provides: libatomic
+Source: feeds/base/libs/toolchain
+SourceName: toolchain
+License: GPL-3.0-with-GCC-exception
+Section: libs
+SourceDateEpoch: 1718622749
+URL: http://gcc.gnu.org/
+ABIVersion: 1
+Status: unknown hold not-installed
+Essential: yes
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 71680
+Filename: libatomic1_13.3.0-r4_aarch64_cortex-a76.ipk
+Size: 8086
+SHA256sum: a7c09b3a44182c255d346b805e05480736ae27709489b421c7f58b8ab9ae7b45
+Description:  Atomic support library
+
+Package: libgcc1
+Version: 13.3.0-r4
+Provides: libgcc
+Source: feeds/base/libs/toolchain
+SourceName: toolchain
+License: GPL-3.0-with-GCC-exception
+Section: libs
+SourceDateEpoch: 1718622749
+URL: http://gcc.gnu.org/
+ABIVersion: 1
+Status: unknown hold not-installed
+Essential: yes
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 143360
+Filename: libgcc1_13.3.0-r4_aarch64_cortex-a76.ipk
+Size: 41385
+SHA256sum: ca0ee89971bddeab5c5df8fac35915b6e0f6b1c3b7f316fbe896484181c04cb5
+Description:  GCC support library
+
+Package: libpthread
+Version: 1.2.5-r4
+Depends: libgcc1
+Source: feeds/base/libs/toolchain
+SourceName: toolchain
+License: GPL-3.0-with-GCC-exception
+Section: libs
+SourceDateEpoch: 1718622749
+URL: http://www.musl-libc.org/
+Status: unknown hold not-installed
+Essential: yes
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: libpthread_1.2.5-r4_aarch64_cortex-a76.ipk
+Size: 914
+SHA256sum: 654ee22f70e297826a73797310f72b032590e7225f5cefc64517647b5445b726
+Description:  POSIX thread library
+
+Package: librt
+Version: 1.2.5-r4
+Depends: libpthread
+Source: feeds/base/libs/toolchain
+SourceName: toolchain
+License: GPL-3.0-with-GCC-exception
+Section: libs
+SourceDateEpoch: 1718622749
+URL: http://www.musl-libc.org/
+Status: unknown hold not-installed
+Essential: yes
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: aarch64_cortex-a76
+Installed-Size: 10240
+Filename: librt_1.2.5-r4_aarch64_cortex-a76.ipk
+Size: 929
+SHA256sum: d537da0a662f46129919d0b8b2f9bdc6d8723ee71689c1f3628f82e56ede04f0
+Description:  POSIX.1b RealTime extension library
+
+Package: mtd
+Version: 26
+Depends: libc, libubox20240329
+Source: feeds/base/system/mtd
+SourceName: mtd
+License: GPL-2.0+
+Section: utils
+SourceDateEpoch: 1739707403
+Architecture: aarch64_cortex-a76
+Installed-Size: 71680
+Filename: mtd_26_aarch64_cortex-a76.ipk
+Size: 11254
+SHA256sum: 3f584349586b372284d742e08b4c7a694cf86ac8f1cae5ebe214f6f9c10ea92a
+Description:  This package contains an utility useful to upgrade from other firmware or 
+ older OpenWrt releases.
+
